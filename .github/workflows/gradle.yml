@@ -41,10 +41,10 @@ jobs:
           DATASOURCE_URL: ${{ secrets.DATASOURCE_URL }}
           DATASOURCE_USERNAME: ${{ secrets.DATASOURCE_USERNAME }}
           DATASOURCE_PASSWORD: ${{ secrets.DATASOURCE_PASSWORD }}
-          CLIENT_ID: ${{ secrets.DATASOURCE_PASSWORD }}
-          CLIENT_SECRET: ${{ secrets.DATASOURCE_PASSWORD }}
-          ISSUER: ${{ secrets.DATASOURCE_PASSWORD }}
-          SECRET_KEY: ${{ secrets.DATASOURCE_PASSWORD }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          ISSUER: ${{ secrets.ISSUER }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
