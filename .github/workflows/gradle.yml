@@ -78,5 +78,5 @@ jobs:
             sudo docker ps -a -q --filter "name=issuetracker" | grep -q . && docker stop ${{ secrets.DOCKER_REPO }} && docker rm ${{ secrets.DOCKER_REPO }} | true
             sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:1.0
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:1.0
-            sudo docker run -d -p 8080:8080 --name ${{ secrets.DOCKER_REPO }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:1.0
+            sudo docker run -d -p 80:8080 --name ${{ secrets.DOCKER_REPO }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:1.0
             sudo docker rmi -f $(docker images -f "dangling=true" -q) || true          
